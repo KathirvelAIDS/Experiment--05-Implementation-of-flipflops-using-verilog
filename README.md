@@ -111,7 +111,17 @@ Q(t+1)=T′Q(t)+TQ(t)′
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: kathirvel.A
 RegisterNumber:  212221230047
-S
+JK FLIP FLOP
+
+module exp5_2(q,qbar,clk,j,k); input j,k,clk; output q,qbar; wire nand1_out;//output from nand1 wire nand2_out;//output from nand2 nand(nand1_out,j,clk,qbar); nand(nand2_out,k,clk,q); nand(q,qbar,nand1_out); nand(qbar,q,nand2_out); endmodule
+
+D FLIP FLOP
+
+module exp5_3(q,qbar,d,clk); input d,clk; output q,qbar; not(dbar,d); nand(x,clk,d); nand(y,clk,dbar); nand(q,qbar,y); nand(qbar,q,x); endmodule
+
+T FLIP FLOP
+
+module exp5_4(t,clk,q,qbar); input t,clk; output q,qbar; wire n1,n2; nand(n1,t,clk,qbar); nand(n2,t,clk,q); nand(q,n1,qbar); nand(qbar,n2,q); endmodule */
 */
 
 
@@ -121,6 +131,23 @@ S
 
 ### RTL LOGIC FOR FLIPFLOPS 
 
+![image](https://user-images.githubusercontent.com/94911373/168006919-8ba17c26-9d3e-44e7-ad80-f8597ef8377b.png)
+
+
+JK FLIP FLOP:
+
+![image](https://user-images.githubusercontent.com/94911373/168007017-5d9aca9a-ad64-4bf5-a15e-815dd4006491.png)
+
+
+D FLIP FLOP:
+
+![image](https://user-images.githubusercontent.com/94911373/168007131-0e35e682-8a11-44ff-87ef-94d84c010950.png)
+
+
+T FLIP FLOP:
+
+
+![image](https://user-images.githubusercontent.com/94911373/168007242-88eb339a-46cc-441b-bf87-130f6bdcf981.png)
 
 
 
@@ -129,7 +156,28 @@ S
 
 
 
-### TIMING DIGRAMS FOR FLIP FLOPS 
+
+### TIMING DIGRAMS FOR FLIP FLOPS
+
+SR FLIP FLOP:
+
+![image](https://user-images.githubusercontent.com/94911373/168007355-06aed4be-e527-40b7-bd32-45e89325092a.png)
+
+
+JK FLIP FLOP:
+
+![image](https://user-images.githubusercontent.com/94911373/168007438-ed281624-9b06-4db1-818e-55f6c61e2d9b.png)
+
+
+D FLIP FLOP:
+
+![image](https://user-images.githubusercontent.com/94911373/168007517-74035a26-ab34-4f0e-9dcc-748902556b36.png)
+
+
+T FLIP FLOP:
+
+![image](https://user-images.githubusercontent.com/94911373/168007602-a12ac40d-6880-4eab-8e81-5453d2cb0b5b.png)
+
 
 
 
